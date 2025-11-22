@@ -1,0 +1,79 @@
+# RECALL INCORPORATED
+## Memory Preservation Services for Claude Code Sessions
+
+> **Quaid:** "Where am I?"
+>
+> **Johnnycab:** "You're in a Johnnycab."
+>
+> **Quaid:** "I mean, what am I doing here?"
+>
+> **Johnnycab:** "I'm sorry. Would you please rephrase the question?"
+>
+> **Quaid:** "How did I get in this taxi?"
+>
+> **Johnnycab:** "The door opened. You got in."
+>
+> *[Johnnycab rolls his eyes]*
+
+![Johnnycab](images/johnnycab.jpg)
+
+---
+
+Ever feel like Douglas Quaid after hitting `Context left until auto-compact: 0%`? Returning to a Claude Code session nearly devoid of context, with no idea where you are or what you're doing? The final straw being delivered by Claude helpfully informing you that "You're in a Claude session", just like Johnnycab?
+
+**Welcome to Recall Inc.** - Your trusted provider of professional memory preservation services. When you need to maintain context across Claude Code sessions, we're here to ensure nothing gets lost in the transition.
+
+> "We can remember it for you wholesale."
+
+---
+
+## Reality Check
+
+![Hauser Message](images/hauser-message.gif)
+
+**Step 1: Recognize the Warning Signs**
+
+![Get to Mars](images/get-to-mars.gif)
+
+You need context preservation when:
+- Claude Code conversations are getting long (approaching token limits)
+- You're switching between multiple complex tasks
+- You need to clear history but can't afford to lose state
+- You're about to use `/compact` or `/reset`
+
+**Step 2: Activate Recall Services**
+
+```bash
+# Invoke the total-recall skill
+/total-recall
+```
+
+Claude will create a comprehensive memory dump at `/tmp/total-recall` containing:
+- Your current work state
+- All key decisions made during the session
+- File paths and artifacts created
+- Next steps and action items
+- Important technical notes
+
+**Step 3: Free Your Mind**
+
+![I Give Up](images/i-give-up.gif)
+
+```bash
+# Clear your session
+/reset
+```
+
+Your conversation history is cleared, but your critical context is safe in `/tmp/total-recall`.
+
+**Step 4: Restore Your Memory**
+
+![Quaid Relaxed](images/quaid-relaxed.gif)
+
+```
+User: read /tmp/total-recall to resume
+
+Claude: I'm now up to speed on your AWS account inventory project.
+        You were working on the SQLite schema migration.
+        Which task would you like to continue with?
+```
