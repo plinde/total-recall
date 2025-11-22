@@ -139,6 +139,24 @@ This automatically triggers total-recall right before Claude compacts your conte
 
 **See [hooks-example.json](hooks-example.json) for a complete example.**
 
+### The Missing PostCompact Hook
+
+Claude Code currently lacks a native `PostCompact` hook to automatically restore context after compaction completes. While `PreCompact` preserves your memory before compaction, you still need to manually read `/tmp/total-recall` to restore context afterward.
+
+The community has [requested a PostCompact hook](https://github.com/anthropics/claude-code/issues/3537#issuecomment-3530584956) to complete the automatic preservation/restoration cycle. Some workarounds exist (like using `PreUserPromptSubmit` hooks to detect post-compact state), but these come with their own drawbacks:
+
+- **Detection uncertainty** - Hooks may trigger on normal prompts, not just post-compact scenarios
+- **Timing issues** - The hook runs before Claude processes the prompt, potentially interrupting user flow
+- **False positives** - May attempt restoration when compaction didn't actually occur
+
+Until a native `PostCompact` hook is available, manual restoration remains the most reliable approach:
+
+```
+User: read /tmp/total-recall to resume
+```
+
+This ensures you control exactly when context restoration happens, avoiding unwanted interruptions or false triggers.
+
 ## License
 
 MIT License - See [LICENSE](LICENSE)
