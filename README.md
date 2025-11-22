@@ -77,3 +77,70 @@ Claude: I'm now up to speed on your AWS account inventory project.
         You were working on the SQLite schema migration.
         Which task would you like to continue with?
 ```
+
+### What Gets Preserved
+
+The total-recall skill captures:
+
+1. **Current State** - What you're working on
+2. **Key Decisions Made** - Important choices and rationale
+3. **Data/Inventory Summary** - Project-specific information
+4. **Generated Files/Artifacts** - Paths to created files
+5. **Next Steps** - Clear action items (with ✅ completion status)
+6. **Important Notes** - Constraints and technical details
+
+---
+
+## When to Use Context Preservation
+
+#### ✅ Use Recall Services When:
+- Approaching token limits and need to `/compact` or `/reset`
+- Working on complex, multi-step tasks with critical state
+- Switching between different projects
+- Building up conversation history debt
+
+### Need to Clear Bad Context?
+
+![Removing Implant](images/quaid-removing-implant.gif)
+
+Sometimes you just need to rip out the bad memories and start fresh with `/reset`.
+
+---
+
+## Installation & Setup
+
+Clone the repository and create symlinks:
+
+```bash
+CLONE_DIR="wherever-you-like"
+git clone https://github.com/plinde/total-recall ${CLONE_DIR}
+ln -s ${CLONE_DIR} ~/.claude/skills/total-recall
+ln -s ${CLONE_DIR}/COMMAND.md ~/.claude/commands/total-recall.md
+```
+
+That's it! Now you can use:
+
+```
+User: /total-recall
+```
+
+This invokes the total-recall skill and saves to `/tmp/total-recall`.
+
+---
+
+## License
+
+MIT License - See [LICENSE](LICENSE)
+
+---
+
+## Acknowledgments
+
+- The `total-recall` skill - The real hero
+- Paul Verhoeven - For the greatest sci-fi action film ever made (1990)
+- Arnold Schwarzenegger - For the memorable one-liners
+- Philip K. Dick - Original author of "We Can Remember It for You Wholesale"
+
+---
+
+> "See you at the party, Richter!"
