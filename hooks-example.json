@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "PreCompact": [
+      {
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "Context compaction is about to occur. Use the total-recall skill to preserve the current session context before compaction. This is critical - invoke /total-recall now to save session state."
+          }
+        ]
+      }
+    ]
+  }
+}

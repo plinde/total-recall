@@ -126,6 +126,31 @@ User: /total-recall
 
 This invokes the total-recall skill and saves to `/tmp/total-recall`.
 
+### Optional: Automatic Context Preservation
+
+For automatic preservation before context compaction, add a PreCompact hook to `~/.claude/settings.json`:
+
+```json
+{
+  "hooks": {
+    "PreCompact": [
+      {
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "Context compaction is about to occur. Use the total-recall skill to preserve the current session context before compaction. This is critical - invoke /total-recall now to save session state."
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+This automatically triggers total-recall right before Claude compacts your context, ensuring nothing is lost during compaction.
+
+**See [hooks-example.json](hooks-example.json) for a complete example.**
+
 ---
 
 ## License
