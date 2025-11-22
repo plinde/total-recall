@@ -9,39 +9,37 @@
 >
 > **Johnnycab:** "I'm sorry. Would you please rephrase the question?"
 >
-> **Quaid:** "How did I get in this taxi?"
->
-> **Johnnycab:** "The door opened. You got in."
->
-> *[Johnnycab rolls his eyes]*
 
-![Johnnycab](images/johnnycab.jpg)
+![Johnnycab](images/total-recall-how-did-i-get-here.gif)
 
----
-
-Ever feel like Douglas Quaid after hitting `Context left until auto-compact: 0%`? Returning to a Claude Code session nearly devoid of context, with no idea where you are or what you're doing? The final straw being delivered by Claude helpfully informing you that "You're in a Claude session", just like Johnnycab?
+Ever feel like Douglas Quaid after hitting `Context left until auto-compact: 0%`? Returning to a Claude Code session nearly devoid of context, with no idea who you are or what you've been doing? The final insult is delivered by Claude helpfully informing you that "You're in a Claude session", just like Johnnycab?
 
 **Welcome to Recall Inc.** - Your trusted provider of professional memory preservation services. When you need to maintain context across Claude Code sessions, we're here to ensure nothing gets lost in the transition.
 
-> "We can remember it for you wholesale."
+## Reality Check
+
+**Step 1: Recognize the Early Warning Signs**
+
+- Do you have too many tools loaded?
+- Is your context window getting low?
+- Have you deviated far your original plans?
+
+If this sounds like you, Recall has the solution.
+
+> "Let me suggest you take a vacation, from yourself"
+
+![Hauser Message](images/quaid-turns-off-tv.gif)
+
+You need to consider your context window utilization when:
+- Claude Code conversations are getting too long (approaching token limits)
+- You've been switching between multiple complex tasks over a long session
+- You're about to resort to a preemptive `/compact` but can't afford to lose state
 
 ---
 
-## Reality Check
-
-![Hauser Message](images/hauser-message.gif)
-
-**Step 1: Recognize the Warning Signs**
+**Step 2: Activate Recall Services**
 
 ![Get to Mars](images/get-to-mars.gif)
-
-You need context preservation when:
-- Claude Code conversations are getting long (approaching token limits)
-- You're switching between multiple complex tasks
-- You need to clear history but can't afford to lose state
-- You're about to use `/compact` or `/reset`
-
-**Step 2: Activate Recall Services**
 
 ```bash
 # Invoke the total-recall skill
@@ -55,9 +53,10 @@ Claude will create a comprehensive memory dump at `/tmp/total-recall` containing
 - Next steps and action items
 - Important technical notes
 
+---
 **Step 3: Free Your Mind**
 
-![I Give Up](images/i-give-up.gif)
+![Quaid Relaxed](images/quaid-relaxed.gif)
 
 ```bash
 # Clear your session
@@ -66,9 +65,10 @@ Claude will create a comprehensive memory dump at `/tmp/total-recall` containing
 
 Your conversation history is cleared, but your critical context is safe in `/tmp/total-recall`.
 
+---
 **Step 4: Restore Your Memory**
 
-![Quaid Relaxed](images/quaid-relaxed.gif)
+![Get to Mars](images/hauser-message.gif)  
 
 ```
 User: read /tmp/total-recall to resume
@@ -78,7 +78,7 @@ Claude: I'm now up to speed on your AWS account inventory project.
         Which task would you like to continue with?
 ```
 
-### What Gets Preserved
+## Total Preservation (Almost) Guaranteed or Your Money Back
 
 The total-recall skill captures:
 
@@ -89,23 +89,11 @@ The total-recall skill captures:
 5. **Next Steps** - Clear action items (with ✅ completion status)
 6. **Important Notes** - Constraints and technical details
 
----
-
-## When to Use Context Preservation
-
-#### ✅ Use Recall Services When:
-- Approaching token limits and need to `/compact` or `/reset`
-- Working on complex, multi-step tasks with critical state
-- Switching between different projects
-- Building up conversation history debt
-
-### Need to Clear Bad Context?
+## Need to clear out bad context?
 
 ![Removing Implant](images/quaid-removing-implant.gif)
 
 Sometimes you just need to rip out the bad memories and start fresh with `/reset`.
-
----
 
 ## Installation & Setup
 
@@ -126,7 +114,7 @@ User: /total-recall
 
 This invokes the total-recall skill and saves to `/tmp/total-recall`.
 
-### Optional: Automatic Context Preservation
+## Optional: Automatic Context Preservation
 
 For automatic preservation before context compaction, add a PreCompact hook to `~/.claude/settings.json`:
 
@@ -151,13 +139,9 @@ This automatically triggers total-recall right before Claude compacts your conte
 
 **See [hooks-example.json](hooks-example.json) for a complete example.**
 
----
-
 ## License
 
 MIT License - See [LICENSE](LICENSE)
-
----
 
 ## Acknowledgments
 
@@ -168,4 +152,4 @@ MIT License - See [LICENSE](LICENSE)
 
 ---
 
-> "See you at the party, Richter!"
+> "Get your ass to Mars" - Hauser
